@@ -35,14 +35,12 @@ body {
 
 #graphics {
   display: flex;
-  overflow:hidden;
-align-items: center;
-
+  overflow: hidden;
+  align-items: center;
 }
 
 #main-img {
-  margin-left: -17%;
-  width: 100%;
+  margin-left: -16%;
 
 }
 
@@ -50,13 +48,6 @@ align-items: center;
   border: 1px solid grey;
   position: absolute;
   z-index: 1;
-  transform: translateX(-50%);
-  top: 46%; 
 
-  width: 10%;
-
-
-
-
+  transform: translateX(-50%) translateY(100%);
 }
-
