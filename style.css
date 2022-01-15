@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --v-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --very-dark-grey: hsl(237, 12%, 33%);
+  --dark-blue: hsl(240, 6%, 50%);
+  --light-grey: hsl(240, 5%, 91%);
+}
+
 html {
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   background-repeat: no-repeat;
@@ -25,12 +33,11 @@ body {
   background-color: white;
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
-  height: 500px;
+  height: auto;
+  min-height: 475px;
   border-radius: 30px;
   margin: 30px;
-
-  position: relative;
+  width: 70%;
 }
 /* ******************************************************************* */
 /* Left */
@@ -39,63 +46,74 @@ body {
   display: flex;
   overflow: hidden;
   align-items: center;
-  border: 1px solid grey;
+  /* border: 2px solid red; */
+  flex-basis: 45%;
+}
+
+picture {
+  width: 97%;
+  margin: 0px auto;
 }
 
 #main-img {
-  margin-left: -16%;
   width: 100%;
-  z-index: 2;
-}
-
-#box-img {
-  border: 1px solid grey;
-  position: absolute;
-  z-index: 3;
-  transform: translateX(-50%) translateY(100%);
 }
 
 /* ******************************************************************* */
 /* Right */
 
 #faq {
-  padding: 100px 20px;
-  border: 1px solid grey;
-
-  width: 500px;
+  padding: 20px;
+  /* border: 2px solid green; */
+  flex-basis: 55%;
 }
 
+#title {
+  margin: 40px 0px;
+  color: var(--v-blue);
+  font-size: 2.5rem;
+}
 .qsblock {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid var(--light-grey);
 }
-
 
 .qs {
-  border: 1px solid grey;
-
-  /* border: none; */
+  border: none;
   margin: 5px 0px;
-  /* padding: 2px 10px; */
   width: 100%;
   background-color: transparent;
   padding-right: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 2rem;
+}
+
+.qs i {
+  color: var(--soft-red);
+  font-size: 1rem;
 }
 
 .qs h3 {
-  color: grey;
+  color: var(--very-dark-grey);
+  text-align: left;
+
+  font-size: 1rem;
 }
-
-
+.qs:hover {
+  color: var(--soft-red);
+}
+.qs h3:hover {
+  color: var(--soft-red);
+}
 .ans {
-  border: 0.5px solid grey;
   margin: 2px;
-  padding: 2px 10px;
-
-
+  padding: 2px 0px 10px 0px;
   display: none;
   overflow: hidden;
+}
 
+.ans p {
+  color: var(--dark-blue);
+  font-size: 1rem;
 }

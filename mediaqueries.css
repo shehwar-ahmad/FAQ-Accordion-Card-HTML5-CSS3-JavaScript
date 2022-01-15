@@ -1,4 +1,32 @@
-@media only screen and (max-width:450px) {
-   
+@media only screen and (max-width: 725px) {
+  #card {
+    flex-direction: column;
+    align-items: center;
+
+    margin: 25% 10px 10% 5px;
+    width: 90%;
+  }
+
+  #graphics {
+    overflow: visible;
+
+    flex-basis: 25%;
+  }
+
+  #main-img {
+    width: 70%;
+    z-index: 0;
+    display: block;
+    margin: 5px auto;
+  }
+
+  #faq {
+    width: 100%;
+    flex-basis: 75%;
+  }
+
+  #title {
+    margin: 10px auto;
+  }
 
 }
